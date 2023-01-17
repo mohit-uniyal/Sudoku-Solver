@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.header{
+    padding: 8px;
+    font-size: 30px;
+    background-color: bisque;
+    text-align: center;
+}
+
+#sudoku-grid>table{
+    margin: 0 auto;
+    /* border: 5px solid black; */
+}
+
+.sub-grid td{
+    width: 50px;
+    height: 50px;
+}
+
+.cells{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+
+#button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    /* background-color: rgb(0, 211, 141); */
+    font-size: 30px;
+    margin: 0 10px;
+    padding: 5px;
+    background-color: bisque;
+    border: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: rgb(255, 205, 144);
+}

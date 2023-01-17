@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">Sudoku Solver</div>
+    <br>
+    <div id="sudoku-grid">
+        <table>
+            <tr>
+                <td>
+                    <table class="sub-grid">
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="sub-grid">
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="sub-grid">
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="sub-grid">
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="sub-grid">
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="sub-grid">
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="sub-grid">
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="sub-grid">
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="sub-grid">
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                            <td><input class="cells" type="text" maxlength="1"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div id="button-container">
+        <button class="button" id="submit">Solve</button>
+        <button class="button" id="reset">Reset</button>
+    </div>
+    <script src="sudoku.js"></script>
+</body>
+
+</html>
