@@ -37,7 +37,7 @@ function solve(grid, row, col) {
     for (let d = "1"; d <= "9"; d++) {
         grid[row][col] = d;
         if (isValid(grid, row, col)) {
-            if (solve(grid, row, col+1)) {
+            if (solve(grid, row, col + 1)) {
                 return true;
             }
         }
@@ -56,25 +56,28 @@ reset.addEventListener("click", function () {
 })
 
 // code to submit the grid and returning the solved grid
-let grid = [];
+let grid = [[], [], [], [], [], [], [], [], []];
 let submit = document.getElementById("submit");
 submit.addEventListener("click", function () {
     let cell = document.getElementsByClassName("cells");
     let k = 0;
-    for (let i = 0; i < 9; i++) {
-        grid[i] = [];
-        for (let j = 0; j < 9; j++) {
-            grid[i][j] = cell[k].value;
-            if (grid[i][j] == "") {
-                grid[i][j] = "0";
+    for (let sr = 0; sr < 3; sr++) {
+        for (let sc = 0; sc < 3; sc++) {
+            for (let i = sr * 3; i < sr * 3 + 3; i++) {
+                for (let j = sc * 3; j < sc * 3 + 3; j++) {
+                    grid[i][j] = cell[k].value;
+                    if (grid[i][j] == "") {
+                        grid[i][j] = "0";
+                    }
+                    k++;
+                }
             }
-            k++;
         }
     }
-    for(let i=0;i<9;i++){
-        for(let j=0;j<9;j++){
-            if(grid[i][j]!="0"){
-                if(!isValid(grid, i, j)){
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            if (grid[i][j] != "0") {
+                if (!isValid(grid, i, j)) {
                     alert("Grid not valid");
                     return;
                 }
@@ -83,13 +86,17 @@ submit.addEventListener("click", function () {
     }
     if (solve(grid, 0, 0)) {
         k = 0;
-        for (let i = 0; i < 9; i++) {
-            for (let j = 0; j < 9; j++) {
-                cell[k].value = grid[i][j];
-                k++;
+        for (let sr = 0; sr < 3; sr++) {
+            for (let sc = 0; sc < 3; sc++) {
+                for (let i = sr * 3; i < sr * 3 + 3; i++) {
+                    for (let j = sc * 3; j < sc * 3 + 3; j++) {
+                        cell[k].value = grid[i][j];
+                        k++;
+                    }
+                }
             }
         }
-    }else{
+    } else {
         alert("Grid not valid");
     }
 })
